@@ -1,0 +1,46 @@
+TOPIC_CONFIG = [
+   { id = 'subnet_0', message_rate = '5.128205128205129/1s', message_size = '200 B' },
+]
+
+[PEER_SCORE_PARAMS]
+
+TopicSoreCap = 100.0
+AppSpecificWeight = 0
+IPColocationFactorWeight = -100.0
+IPColocationFactorThreshold = 10
+BehaviourPenaltyWeight = -15.879335171059182
+BehaviourPenaltyThreshold = 6
+BehaviourPenaltyDecay = 0.9857119009006162
+DecayInterval = '12.0s'
+DecayToZero = 0.01
+RetainScore = 38400.0
+
+  [PEER_SCORE_PARAMS.Thresholds]
+  GossipThreshold = -4000
+  PublishThreshold = -8000
+  GraylistThreshold = -16000
+  AcceptPXThreshold = 100
+
+  [PEER_SCORE_PARAMS.Topics.subnet_0]
+  TopicWeight = 0.03125
+
+  TimeInMeshWeight = 0.03333333333333333
+  TimeInMeshQuantum = 12.0
+  TimeInMeshCap = 300.0
+
+  FirstMessageDeliveriesWeight = 0.09187978823088193
+  FirstMessageDeliveriesDecay = 0.9646616199111993
+  FirstMessageDeliveriesCap = 435.351460535425
+
+  MeshMessageDeliveriesWeight = -0.34489534908743025
+  MeshMessageDeliveriesDecay = 0.9910458562488609
+  MeshMessageDeliveriesThreshold = 136.22170696078803
+  MeshMessageDeliveriesCap = 2179.5473113726084
+  MeshMessageDeliveriesActivation = '1152.0s'
+  MeshMessageDeliveriesWindow = '2s'
+
+  MeshFailurePenaltyWeight = -0.34489534908743025
+  MeshFailurePenaltyDecay = 0.9910458562488609
+
+  InvalidMessageDeliveriesWeight = -1280.0
+  InvalidMessageDeliveriesDecay = 0.9985619193472844
