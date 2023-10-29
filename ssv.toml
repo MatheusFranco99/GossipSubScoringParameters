@@ -4,9 +4,9 @@ TOPIC_CONFIG = [
 
 [PEER_SCORE_PARAMS]
 
-TopicSoreCap = 100.0
+TopicSoreCap = 33.33333333333333
 AppSpecificWeight = 0
-IPColocationFactorWeight = -100.0
+IPColocationFactorWeight = -33.33333333333333
 IPColocationFactorThreshold = 10
 BehaviourPenaltyWeight = -15.879335171059182
 BehaviourPenaltyThreshold = 6
